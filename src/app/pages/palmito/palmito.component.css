@@ -248,7 +248,7 @@
   color: white;
   border-color: #3b82f6;
 }
-.screenshot-section {
+.screenshots-section {
   margin-top: 2rem;
   padding: 1.5rem;
   background: #ffffff;
@@ -256,22 +256,49 @@
   border: 1px solid #e5e7eb;
 }
 
-.screenshot-section h3 {
+.screenshots-section h3 {
   color: #1f2937;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 1.2rem;
 }
 
-.screenshot-container {
-  text-align: center;
+/* Screenshot principale */
+.screenshot-main {
+  margin-bottom: 2rem;
 }
 
-.screenshot {
-  max-width: 100%;
+.screenshot-large {
+  width: 100%;
+  max-width: 800px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid #e5e7eb;
+}
+
+/* Grille des screenshots secondaires */
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.screenshot-item {
+  text-align: center;
+}
+
+.screenshot-small {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+/* Container et caption communs */
+.screenshot-container {
+  text-align: center;
 }
 
 .screenshot-caption {
@@ -279,6 +306,9 @@
   font-style: italic;
   margin-top: 0.5rem;
   font-size: 0.9rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .improvement-note {
