@@ -1,0 +1,174 @@
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a routerLink="/home">Mon Portfolio</a>
+  </div>
+  <ul class="navbar-links">
+    <li><a routerLink="/home" routerLinkActive="active">Accueil</a></li>
+    <li><a routerLink="/projets" routerLinkActive="active">Projets</a></li>
+    <li><a routerLink="/palmito" routerLinkActive="active">Palmito</a></li>
+    <li><a routerLink="/competences" routerLinkActive="active">Compétences</a></li> 
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+  </ul>
+</nav>
+<div class="palmito-container">
+  <h1>Projet Palmito</h1> 
+  
+  <!-- Navigation simplifiée -->
+  <nav class="palmito-nav">
+  <ul>
+    <li><a (click)="scrollTo('presentation')">Présentation</a></li>
+    <li><a (click)="scrollTo('technos')">Technologies</a></li>
+    <li><a (click)="scrollTo('architecture')">Architecture</a></li>
+    <li><a (click)="scrollTo('securite')">Sécurité</a></li>
+  </ul>
+</nav>
+
+  <!-- Hero section -->
+  <div class="project-hero">
+    <div class="hero-content">
+      <h2>Application web de gestion de plantes</h2>
+      <p class="hero-description">Une solution complète développée avec Angular, C# et Docker</p>
+      <div class="tech-pills">
+        <span class="tech-pill">Angular</span>
+        <span class="tech-pill">C# .NET</span>
+        <span class="tech-pill">Docker</span>
+        <span class="tech-pill">Nginx</span>
+        <span class="tech-pill">Linux</span>
+      </div>
+    </div>
+  </div>
+
+<section id="presentation" class="section">
+  <h2>📋 Présentation</h2>
+  <p>
+    <strong>Palmito</strong> est né d'un besoin personnel : gérer facilement l'entretien de mes plantes 
+    et celles de mes proches. J'ai décidé de le développer moi-même pour avoir un outil parfaitement 
+    adapté à mes besoins.
+  </p>
+  
+  <div class="key-points">
+    <div class="point">
+      <strong>🎯 Objectif initial</strong>
+      <p>Créer un outil simple pour suivre l'entretien des plantes au quotidien</p>
+    </div>
+    <div class="point">
+      <strong>🚀 Version actuelle</strong>
+      <p>Application fonctionnelle utilisée en production</p>
+    </div>
+    <div class="point">
+      <strong>🔮 Vision à long terme</strong>
+      <p>Évoluer vers une plateforme communautaire pour les passionnés de plantes</p>
+    </div>
+  </div>
+
+  <div class="screenshot-section">
+    <h3>🎨 Interface utilisateur</h3>
+    <div class="screenshot-container">
+      <img src="assets/palmito-screenshot.jpg" alt="Capture d'écran de l'application Palmito" class="screenshot">
+      <p class="screenshot-caption">Interface moderne et intuitive de gestion des plantes</p>
+    </div>
+  </div>
+
+  <p class="improvement-note">
+    <strong>🔄 Amélioration continue :</strong> Le projet suit une démarche d'itérations constantes 
+    avec ajout régulier de fonctionnalités et optimisations techniques pour viser un public plus large.
+  </p>
+</section>
+
+  <section id="technos" class="section">
+    <h2>⚙️ Technologies</h2>
+    <div class="technologies-grid">
+      <div class="tech-category">
+        <h3>Frontend</h3>
+        <ul>
+          <li>Angular</li>
+          <li>TypeScript</li>
+          <li>HTML5/CSS3</li>
+        </ul>
+      </div>
+      <div class="tech-category">
+        <h3>Backend</h3>
+        <ul>
+          <li>C# .NET</li>
+          <li>API REST</li>
+          <li>Entity Framework</li>
+        </ul>
+      </div>
+      <div class="tech-category">
+        <h3>Infrastructure</h3>
+        <ul>
+          <li>Docker & Docker Compose</li>
+          <li>Nginx</li>
+          <li>Linux Debian</li>
+          <li>OVH Cloud</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="architecture" class="section">
+  <h2>🏗️ Architecture</h2>
+  <p>
+    Application containerisée avec une architecture <strong>monolithique modulaire</strong> 
+    conçue pour être scalable et sécurisée :
+  </p>
+  
+  <div class="architecture-points">
+    <div class="arch-point">
+      <strong>📦 Frontend Angular</strong>
+       <p>Interface utilisateur responsive</p> 
+    </div>
+    
+    <div class="arch-point">
+      <strong>🔧 Backend C# .NET</strong>
+      <p>API REST avec gestion des sessions, cookies sécurisés et authentification JWT</p>
+    </div>
+    
+    <div class="arch-point">
+      <strong>🗄️ Base de données</strong>
+      <p>Gestion des données utilisateurs</p>
+    </div>
+    
+    <div class="arch-point">
+      <strong>🍪 Gestion des sessions</strong>
+      <p>Cookies HTTPOnly + Secure pour la protection contre les attaques XSS</p>
+    </div>
+    
+    <div class="arch-point">
+      <strong>🌐 Reverse Proxy</strong>
+        <p>Nginx pour le routing et SSL</p>
+    </div>
+    
+    <div class="arch-point">
+      <strong>🔒 Sécurité applicative</strong>
+      <p>Validation des inputs, CORS configuré et protection CSRF</p>
+    </div>
+  </div>
+
+  
+</section>
+  <section id="securite" class="section">
+    <h2>🔒 Sécurité</h2>
+    <div class="security-features">
+      <div class="security-point">
+        <strong>🔐 Authentification</strong>
+        <p>Système de connexion sécurisé avec rôles utilisateurs et cookies</p>
+      </div>
+      <div class="security-point">
+        <strong>🔒 Chiffrement</strong>
+        <p>Données sensibles chiffrées en base</p>
+      </div>
+      <div class="security-point">
+        <strong>🛡️ Protection API</strong>
+        <p>Endpoints sécurisés et validation des permissions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <div class="project-cta">
+    <h3>Intéressé par ce type de projet ?</h3>
+    <p>Je peux développer une solution similaire adaptée à vos besoins</p>
+    <a routerLink="/contact" class="btn-primary">Discutons-en</a>
+  </div>
+</div>

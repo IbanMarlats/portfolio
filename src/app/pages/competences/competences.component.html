@@ -1,0 +1,139 @@
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a routerLink="/home">Mon Portfolio</a>
+  </div>
+  <ul class="navbar-links">
+    <li><a routerLink="/home" routerLinkActive="active">Accueil</a></li>
+    <li><a routerLink="/projets" routerLinkActive="active">Projets</a></li>
+    <li><a routerLink="/palmito" routerLinkActive="active">Palmito</a></li>
+    <li><a routerLink="/competences" routerLinkActive="active">Compétences</a></li> 
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="competences-container">
+  <h1>💼 Mes Compétences</h1>
+  
+  <div class="competences-intro">
+    <p>
+      Un panorama de mes expertises techniques et professionnelles, 
+      acquises au travers de mes projets et expériences.
+    </p>
+  </div>
+ <!-- Section CV -->
+  <div class="cv-section">
+    <h2>📄 Mon CV</h2>
+    <div class="cv-content">
+      <div class="cv-image">
+        <img src="assets/cv-preview.jpg" alt="Aperçu de mon CV" class="cv-preview">
+      </div>
+      <div class="cv-download">
+        <h3>Télécharger mon CV</h3>
+        <p>Version complète et à jour de mon parcours professionnel</p>
+        <button class="btn-download disabled" disabled>
+          ⏳ Bientôt disponible
+        </button>
+        <p class="download-note">Le CV sera disponible prochainement</p>
+      </div>
+    </div>
+  </div>
+  <div class="competences-grid">
+    <!-- Développement Applications -->
+    <div class="competence-category">
+      <h2>🖥️ Développement Applications</h2>
+      <div class="skills-list">
+        <div class="skill-item">
+          <strong>C# .NET</strong>
+          <span>Applications Windows, APIs, Entity Framework</span>
+        </div>
+        <div class="skill-item">
+          <strong>Angular</strong>
+          <span>Applications web modernes, Single Page Apps</span>
+        </div>
+        <div class="skill-item">
+          <strong>Python</strong>
+          <span>Scripts, automatisation, outils métier</span>
+        </div>
+        <div class="skill-item">
+          <strong>PHP / Symfony</strong>
+          <span>Développement web backend</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- E-commerce & Web -->
+    <div class="competence-category">
+      <h2>🛒 E-commerce & Web</h2>
+      <div class="skills-list">
+        <div class="skill-item">
+          <strong>PrestaShop</strong>
+          <span>Boutiques en ligne, modules, thématiques</span>
+        </div>
+        <div class="skill-item">
+          <strong>WordPress</strong>
+          <span>Sites vitrines, blogs, fonctionnalités sur mesure</span>
+        </div>
+        <div class="skill-item">
+          <strong>SEO</strong>
+          <span>Référencement naturel, Google Search Console</span>
+        </div>
+        <div class="skill-item">
+          <strong>Base de données</strong>
+          <span>MySQL, conception, optimisation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outils & Environnements -->
+    <div class="competence-category">
+      <h2>🛠️ Outils & Environnements</h2>
+      <div class="skills-list">
+        <div class="skill-item">
+          <strong>Visual Studio / VS Code</strong>
+          <span>Environnements de développement</span>
+        </div>
+        <div class="skill-item">
+          <strong>Docker</strong>
+          <span>Conteneurisation, déploiement</span>
+        </div>
+        <div class="skill-item">
+          <strong>Git / GitHub</strong>
+          <span>Versionning, collaboration</span>
+        </div>
+        <div class="skill-item">
+          <strong>OVH / Hébergement</strong>
+          <span>Serveurs dédiés, déploiement</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compétences Freelance -->
+    <div class="competence-category">
+      <h2>💼 Compétences Freelance</h2>
+      <div class="skills-list">
+        <div class="skill-item">
+          <strong>Gestion de projet</strong>
+          <span>Planification, suivi, livraison</span>
+        </div>
+        <div class="skill-item">
+          <strong>Devis & Facturation</strong>
+          <span>Établissement devis, gestion facturation</span>
+        </div>
+        <div class="skill-item">
+          <strong>Relation client</strong>
+          <span>Écoute, conseil, communication</span>
+        </div>
+        <div class="skill-item">
+          <strong>Support & Maintenance</strong>
+          <span>Accompagnement continu, dépannage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="competences-cta">
+    <h3>📞 Un projet en tête ?</h3>
+    <p>Discutons de vos besoins et voyons comment je peux vous aider.</p>
+    <a routerLink="/contact" class="btn-primary">Me contacter</a>
+  </div>
+</div>
