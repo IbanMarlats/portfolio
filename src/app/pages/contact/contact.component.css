@@ -1,190 +1,230 @@
+/* =========================================
+   0. VARIABLES (A conserver si non globales)
+   ========================================= */
+:root {
+  --bg-top: #e0f2f1;
+  --bg-bottom: #b2dfdb;
+  --green-deep: #1b4d3e;
+  --green-vibrant: #2e7d32;
+  --accent-lime: #cddc39;
+  --text-dark: #374151;
+  --text-muted: #6b7280;
+}
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0d1117;
-    padding: 1rem 2rem;
-    color: #ffffff;
-  }
-  
-  .navbar-logo a {
-    font-size: 1.5rem;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-  }
-  
-  .navbar-links li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
-  
-  .navbar-links li a.active {
-    border-bottom: 2px solid #58a6ff;
-  }
-  
-.contact-container {
+  background: rgba(255, 255, 255, 0.6) !important;
+}
+/* =========================================
+   1. LAYOUT PRINCIPAL (Identique aux autres pages)
+   ========================================= */
+.projects-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(170deg, var(--bg-top) 20%, var(--bg-bottom) 100%);
+  padding-bottom: 4rem;
+}
+
+.projects-container {
   max-width: 1000px;
-  margin: 80px auto 0 auto;
-  padding: 40px 20px;
-  font-family: 'Segoe UI', sans-serif;
-  color: #374151;
-  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
-.contact-container h1 {
-  font-size: 2.5rem;
+.projects-header {
+  text-align: center;
+  margin-bottom: 4rem; 
+  padding-top: 2rem;
+}
+
+.projects-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--green-deep);
   margin-bottom: 1rem;
-  color: #1f2937;
-  text-align: center;
-  font-weight: 700;
 }
 
-.contact-intro {
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #6b7280;
+.projects-intro {
   font-size: 1.1rem;
+  color: var(--text-dark);
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-.contact-content {
+/* =========================================
+   2. SECTION GLASS & GRILLE CONTACT
+   ========================================= */
+.project-section {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 3rem;
+  margin-bottom: 4rem;
+}
+
+.contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 4rem;
   align-items: start;
 }
 
-/* Informations de contact */
-.contact-info h2 {
-  color: #1f2937;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+.project-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--green-deep);
+  border-bottom: 1px solid rgba(37, 77, 61, 0.1);
+  padding-bottom: 1rem;
 }
 
-.contact-methods {
+/* =========================================
+   3. CARTES DE CONTACT (Gauche)
+   ========================================= */
+.contact-cards {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 2rem;
 }
 
-.contact-method {
-  background: #f8fafc;
-  padding: 1.25rem;
-  border-radius: 8px;
-  border-left: 4px solid #3b82f6;
-}
-
-.contact-method strong {
-  color: #1f2937;
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-}
-
-.contact-method a {
-  color: #3b82f6;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-method a:hover {
-  text-decoration: underline;
-}
-
-.contact-method span {
-  color: #6b7280;
-}
-
-/* Types de projets */
-.project-types {
-  background: #f0f9ff;
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
   padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid #e0f2fe;
+  border-radius: 15px;
+  border-left: 4px solid var(--accent-lime);
+  transition: all 0.3s ease;
+  text-decoration: none; /* Pour les liens */
 }
 
-.project-types h3 {
-  color: #0369a1;
+/* Effet Hover spécifique pour les liens */
+.contact-card-link:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.95);
+  border-left-color: var(--green-vibrant);
+  cursor: pointer;
+}
+
+.icon-box {
+  font-size: 2rem;
+}
+
+.feature-card strong {
+  display: block;
+  color: var(--green-deep);
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   4. TYPES DE MISSIONS (Droite)
+   ========================================= */
+.scope-box {
+  background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(183, 228, 199, 0.2));
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.scope-box h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--green-vibrant);
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
-.project-types ul {
+.scope-intro {
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.scope-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.project-types li {
-  padding: 0.5rem 0;
-  color: #0c4a6e;
+.scope-list li {
   position: relative;
-  padding-left: 1.5rem;
+  padding: 0.8rem 0 0.8rem 2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  color: var(--green-deep);
+  font-weight: 500;
 }
 
-.project-types li:before {
-  content: "✓";
-  color: #10b981;
+.scope-list li:last-child {
+  border-bottom: none;
+}
+
+.scope-list li::before {
+  content: '✓';
   position: absolute;
   left: 0;
+  color: var(--green-vibrant);
   font-weight: bold;
 }
 
-/* CTA */
-.contact-cta {
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-  padding: 2rem;
-  border-radius: 12px;
+/* =========================================
+   5. CTA FINAL
+   ========================================= */
+.projects-cta {
   text-align: center;
-  border: 1px solid #e5e7eb;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  margin-top: 4rem;
 }
 
-.contact-cta h3 {
-  color: #1f2937;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+.projects-cta h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--green-deep);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 
-.contact-cta p {
-  color: #6b7280;
-  margin-bottom: 1.5rem;
+.projects-cta p {
+  margin-bottom: 2rem;
+  color: var(--text-dark);
 }
 
-.btn-primary {
-  background: #3b82f6;
-  color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
+.btn-secondary {
   display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background-color: var(--green-deep);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 15px rgba(27, 77, 62, 0.3);
 }
 
-.btn-primary:hover {
-  background: #2563eb;
+.btn-secondary:hover {
+  background-color: var(--green-vibrant);
+  transform: translateY(-2px);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-content {
+/* =========================================
+   6. RESPONSIVE & NAVBAR
+   ========================================= */
+@media (max-width: 850px) {
+  .projects-header h1 { font-size: 2.2rem; }
+  
+  .contact-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
   
-  .contact-methods {
-    gap: 1rem;
-  }
+  .project-section { padding: 1.5rem; }
 }

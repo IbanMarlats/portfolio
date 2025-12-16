@@ -1,58 +1,86 @@
+
 <nav class="navbar">
   <div class="navbar-logo">
     <a routerLink="/home">Mon Portfolio</a>
   </div>
-  <ul class="navbar-links">
+  <ul class="navbar-links hidden-mobile">
     <li><a routerLink="/home" routerLinkActive="active">Accueil</a></li>
     <li><a routerLink="/projets" routerLinkActive="active">Projets</a></li>
     <li><a routerLink="/palmito" routerLinkActive="active">Palmito</a></li>
-    <li><a routerLink="/competences" routerLinkActive="active">Compétences</a></li> 
+    <li><a routerLink="/competences" routerLinkActive="active">Compétences</a></li>
     <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
   </ul>
 </nav>
 
-<div class="contact-container">
-  <h1>📞 Contact</h1>
-
-  <div class="contact-content">
-    <!-- Informations de contact -->
-    <div class="contact-info">
-      
-      <div class="contact-methods">
-        <div class="contact-method">
-          <strong>📧 Email</strong>
-          <a href="mailto:iban.marlats&#64;gmail.com">iban.marlats&#64;gmail.com</a>
-        </div>
-        
-        <div class="contact-method">
-          <strong>💼 Malt</strong>
-          <a href="https://www.malt.fr/profile/ibanmarlats" target="_blank">Voir mon profil Malt</a>
-        </div>
-        
-        <div class="contact-method">
-          <strong>📍 Localisation</strong>
-          <span>Bordeaux, France</span>
-        </div>
-      </div>
-
-      <!-- Types de projets -->
-      <div class="project-types">
-        <h3>🛠️ Types de projets</h3>
-        <ul>
-          <li>Applications Windows sur mesure</li>
-          <li>Applications web (Angular, C# .NET)</li>
-          <li>Scripts et outils d'automatisation (Python)</li>
-          <li>Sites e-commerce (PrestaShop, WordPress)</li>
-          <li>Optimisation et maintenance de solutions existantes</li>
-        </ul>
-      </div>
+<div class="projects-page-wrapper">
+  <div class="projects-container">
+    
+    <div class="projects-header">
+      <h1>Parlons de votre projet</h1>
+      <p class="projects-intro">
+        Une idée en tête ou besoin d'un renfort technique ? 
+        Je suis disponible pour échanger sur vos besoins.
+      </p>
     </div>
 
-    <!-- Call to Action simple -->
-    <div class="contact-cta">
+    <section class="project-section">
+      <div class="contact-grid">
+        
+        <div class="contact-left">
+          <div class="project-header">
+            <h2>📞 Mes Coordonnées</h2>
+          </div>
+          
+          <div class="contact-cards">
+            <a href="mailto:iban.marlats&#64;gmail.com" class="feature-card contact-card-link">
+              <div class="icon-box">📧</div>
+              <div>
+                <strong>Email</strong>
+                <p>iban.marlats&#64;gmail.com</p>
+              </div>
+            </a>
+
+            <a href="https://www.malt.fr/profile/ibanmarlats" target="_blank" class="feature-card contact-card-link">
+              <div class="icon-box">💼</div>
+              <div>
+                <strong>Malt</strong>
+                <p>Voir mon profil freelance & avis</p>
+              </div>
+            </a>
+
+            <div class="feature-card">
+              <div class="icon-box">📍</div>
+              <div>
+                <strong>Localisation</strong>
+                <p>Bordeaux, France (et Télétravail)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <div class="scope-box">
+            <h3>🛠️ Types de missions</h3>
+            <p class="scope-intro">Je peux intervenir sur l'ensemble du cycle de vie de vos projets :</p>
+            
+            <ul class="scope-list">
+              <li>Développement d'applications Windows (.NET)</li>
+              <li>Création d'applications Web (Angular / C#)</li>
+              <li>Scripts d'automatisation & Outils (Python)</li>
+              <li>Sites E-commerce (PrestaShop / WordPress)</li>
+              <li>Maintenance & Optimisation de l'existant</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="projects-cta">
       <h3>🚀 Prêt à démarrer ?</h3>
-      <p>Envoyez-moi un email avec votre projet, je vous réponds sous 24h.</p>
-      <a href="mailto:iban.marlats&#64;gmail.com" class="btn-primary">✉️ Envoyer un email</a>
+      <p>Je m'engage à vous répondre sous 24h ouvrées.</p>
+      <a href="mailto:iban.marlats&#64;gmail.com" class="btn-secondary">✉️ Envoyer un message</a>
     </div>
+
   </div>
 </div>

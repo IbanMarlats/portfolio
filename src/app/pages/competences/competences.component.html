@@ -2,138 +2,131 @@
   <div class="navbar-logo">
     <a routerLink="/home">Mon Portfolio</a>
   </div>
-  <ul class="navbar-links">
+  <ul class="navbar-links hidden-mobile">
     <li><a routerLink="/home" routerLinkActive="active">Accueil</a></li>
     <li><a routerLink="/projets" routerLinkActive="active">Projets</a></li>
     <li><a routerLink="/palmito" routerLinkActive="active">Palmito</a></li>
-    <li><a routerLink="/competences" routerLinkActive="active">Compétences</a></li> 
+    <li><a routerLink="/competences" routerLinkActive="active">Compétences</a></li>
     <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
   </ul>
 </nav>
 
-<div class="competences-container">
-  <h1>💼 Mes Compétences</h1>
-  
-  <div class="competences-intro">
-    <p>
-      Un panorama de mes expertises techniques et professionnelles, 
-      acquises au travers de mes projets et expériences.
-    </p>
-  </div>
- <!-- Section CV -->
-  <div class="cv-section">
-    <h2>📄 Mon CV</h2>
-    <div class="cv-content">
-      <div class="cv-image">
-        <img src="cv-preview.jpg" alt="Aperçu de mon CV" class="cv-preview">
-      </div>
-      <div class="cv-download">
-      <h3>Télécharger mon CV</h3>
-      <p>Version complète et à jour de mon parcours professionnel</p>
-      <a href="cv.pdf" download="CV_Iban_Marlats.pdf" class="btn-download">
-        📥 Télécharger le CV
-      </a>
-      <p class="download-note">PDF - Mise à jour récente</p>
-    </div>
-    </div>
-  </div>
-  <div class="competences-grid">
-    <!-- Développement Applications -->
-    <div class="competence-category">
-      <h2>🖥️ Développement Applications</h2>
-      <div class="skills-list">
-        <div class="skill-item">
-          <strong>C# .NET</strong>
-          <span>Applications Windows, APIs, Entity Framework</span>
-        </div>
-        <div class="skill-item">
-          <strong>Angular</strong>
-          <span>Applications web modernes, Single Page Apps</span>
-        </div>
-        <div class="skill-item">
-          <strong>Python</strong>
-          <span>Scripts, automatisation, outils métier</span>
-        </div>
-        <div class="skill-item">
-          <strong>PHP / Symfony</strong>
-          <span>Développement web backend</span>
-        </div>
-      </div>
+<div class="projects-page-wrapper">
+  <div class="projects-container">
+    
+    <div class="projects-header">
+      <h1>Expertises & CV</h1>
+      <p class="projects-intro">
+        Un panorama de mes expertises techniques et professionnelles, 
+        acquises au travers de mes projets et expériences.
+      </p>
     </div>
 
-    <!-- E-commerce & Web -->
-    <div class="competence-category">
-      <h2>🛒 E-commerce & Web</h2>
-      <div class="skills-list">
-        <div class="skill-item">
-          <strong>PrestaShop</strong>
-          <span>Boutiques en ligne, modules, thématiques</span>
+    <section class="project-section" id="cv">
+      <div class="project-header">
+        <h2>📄 Mon Curriculum Vitae</h2>
+        <span class="project-badge">Disponible en PDF</span>
+      </div>
+
+      <div class="cv-layout">
+        <div class="cv-preview-container">
+          <img src="cv-preview.jpg" alt="Aperçu du CV" class="cv-img">
         </div>
-        <div class="skill-item">
-          <strong>WordPress</strong>
-          <span>Sites vitrines, blogs, fonctionnalités sur mesure</span>
-        </div>
-        <div class="skill-item">
-          <strong>SEO</strong>
-          <span>Référencement naturel, Google Search Console</span>
-        </div>
-        <div class="skill-item">
-          <strong>Base de données</strong>
-          <span>MySQL, conception, optimisation</span>
+        
+        <div class="cv-actions">
+          <h3>Profil complet</h3>
+          <p>
+            Retrouvez le détail de mon parcours : expériences professionnelles, 
+            formations et soft skills dans un format synthétique.
+          </p>
+          
+          <div class="cv-buttons">
+            <a href="cv.pdf" download="CV_Iban_Marlats.pdf" class="btn-primary">
+              📥 Télécharger le CV
+            </a>
+            <span class="download-note">Mise à jour récente • PDF</span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Outils & Environnements -->
-    <div class="competence-category">
-      <h2>🛠️ Outils & Environnements</h2>
-      <div class="skills-list">
-        <div class="skill-item">
-          <strong>Visual Studio / VS Code</strong>
-          <span>Environnements de développement</span>
-        </div>
-        <div class="skill-item">
-          <strong>Docker</strong>
-          <span>Conteneurisation, déploiement</span>
-        </div>
-        <div class="skill-item">
-          <strong>Git / GitHub</strong>
-          <span>Versionning, collaboration</span>
-        </div>
-        <div class="skill-item">
-          <strong>OVH / Hébergement</strong>
-          <span>Serveurs dédiés, déploiement</span>
-        </div>
+    <section class="project-section" id="skills">
+      <div class="project-header">
+        <h2>💼 Compétences Techniques</h2>
       </div>
-    </div>
 
-    <!-- Compétences Freelance -->
-    <div class="competence-category">
-      <h2>💼 Compétences Freelance</h2>
-      <div class="skills-list">
-        <div class="skill-item">
-          <strong>Gestion de projet</strong>
-          <span>Planification, suivi, livraison</span>
+      <div class="main-skills-grid">
+        
+        <div class="skill-column">
+          <h3>🖥️ Développement App</h3>
+          <div class="skill-cards-container">
+            <div class="feature-card">
+              <strong>C# .NET</strong>
+              <p>Applications Windows, API REST, Entity Framework.</p>
+            </div>
+            <div class="feature-card">
+              <strong>Angular</strong>
+              <p>SPA modernes, RxJS, Angular Material.</p>
+            </div>
+            <div class="feature-card">
+              <strong>Python</strong>
+              <p>Scripting, automatisation de tâches et outils métier.</p>
+            </div>
+            <div class="feature-card">
+              <strong>PHP / Symfony</strong>
+              <p>Backend robuste pour applications web complexes.</p>
+            </div>
+          </div>
         </div>
-        <div class="skill-item">
-          <strong>Devis & Facturation</strong>
-          <span>Établissement devis, gestion facturation</span>
+
+        <div class="skill-column">
+          <h3>🛒 E-commerce & Web</h3>
+          <div class="skill-cards-container">
+            <div class="feature-card">
+              <strong>PrestaShop</strong>
+              <p>Création de boutiques, développement de modules custom.</p>
+            </div>
+            <div class="feature-card">
+              <strong>WordPress</strong>
+              <p>Sites vitrines, blogs et intégration de thèmes.</p>
+            </div>
+            <div class="feature-card">
+              <strong>SEO & Analytics</strong>
+              <p>Optimisation technique, Google Search Console.</p>
+            </div>
+            <div class="feature-card">
+              <strong>Base de données</strong>
+              <p>PostgreSQL, MySQL : conception et optimisation.</p>
+            </div>
+          </div>
         </div>
-        <div class="skill-item">
-          <strong>Relation client</strong>
-          <span>Écoute, conseil, communication</span>
+
+        <div class="skill-column">
+          <h3>🛠️ Outils & Soft Skills</h3>
+          <div class="skill-cards-container">
+            <div class="feature-card">
+              <strong>DevOps & Tools</strong>
+              <p>Docker, Git/GitHub, CI/CD, Visual Studio.</p>
+            </div>
+            <div class="feature-card">
+              <strong>Infrastructure</strong>
+              <p>Déploiement OVH, Linux Debian, Serveurs dédiés.</p>
+            </div>
+            <div class="feature-card highlight-card">
+              <strong>🤝 Freelance</strong>
+              <p>Gestion de projet, relation client, devis & facturation.</p>
+            </div>
+          </div>
         </div>
-        <div class="skill-item">
-          <strong>Support & Maintenance</strong>
-          <span>Accompagnement continu, dépannage</span>
-        </div>
+
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="competences-cta">
-    <h3>📞 Un projet en tête ?</h3>
-    <p>Discutons de vos besoins et voyons comment je peux vous aider.</p>
-    <a routerLink="/contact" class="btn-primary">Me contacter</a>
+    <div class="projects-cta">
+      <h3>Un projet en tête ?</h3>
+      <p>Mes compétences sont à votre disposition pour concrétiser vos idées.</p>
+      <a routerLink="/contact" class="btn-secondary">Me contacter</a>
+    </div>
+
   </div>
 </div>
